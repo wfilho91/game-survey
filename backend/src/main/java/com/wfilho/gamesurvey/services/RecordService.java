@@ -1,6 +1,8 @@
 package com.wfilho.gamesurvey.services;
 
 import java.time.Instant;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,5 +38,11 @@ public class RecordService {
 		entity = repository.save(entity);
 		
 		return new RecordDTO(entity);
+	}
+
+	@Transactional(readOnly = true)
+	public List<RecordDTO> findAll() {
+		List<Record>list = repository.findAll();
+		return list.stream().map(x -> new RecordDTO(x)).collect(Collectors.toList());
 	}
 }
