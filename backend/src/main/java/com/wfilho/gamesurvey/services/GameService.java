@@ -22,5 +22,4 @@ public class GameService {
 
 		return list.stream().map(x -> new GameDTO(x)).collect(Collectors.toList());
 	}
-
 }
