@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.css'
 import { ReactComponent as Logo } from 'assets/img/logo.svg'
 
+
 const Header = () => {
   return (
     <header className="main-header">
