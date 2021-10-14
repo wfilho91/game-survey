@@ -1,4 +1,5 @@
-import Header from 'assets/components/Header'
+import Header from 'core/components/Header'
+import Charts from 'pages/Charts'
 import Home from 'pages/Home'
 import Records from 'pages/Records'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
@@ -13,6 +14,9 @@ const Routes = () => {
         </Route>
         <Route path="/records">
           <Records />
+        </Route>
+        <Route path="/charts">
+          <Charts />
         </Route>
       </Switch>
     </BrowserRouter>

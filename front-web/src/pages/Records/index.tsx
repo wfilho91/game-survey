@@ -1,12 +1,11 @@
 import axios from 'axios'
+import Filters from 'core/components/Filters'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import Pagination from './components/Pagination'
 import { formatDate } from './helpers'
 import './styles.css'
-import { RecordsResponse } from './types'
+import { BASE_URL, RecordsResponse } from './types'
 
-const BASE_URL = 'http://localhost:8080'
 
 const Records = () => {
   const [recordsResponse, setRecordsResponse] = useState<RecordsResponse>()
@@ -24,11 +23,7 @@ const Records = () => {
 
   return (
     <div className="page-container">
-      <div className="filters-container records-actions">
-        <Link to="/charts">
-          <button className="action-filters">VER GRÁFICO</button>
-        </Link>
-      </div>
+      <Filters link="/charts" text="VER GRÁFICOS"/>
       <table className="records-table" cellPadding="0" cellSpacing="0">
         <thead>
           <tr>
@@ -46,7 +41,7 @@ const Records = () => {
               <td>{formatDate(record.moment)}</td>
               <td>{record.name}</td>
               <td>{record.age}</td>
-              <td className="text-secondary">{record.platform}</td>
+              <td className="text-secondary">{record.gamePlatform}</td>
               <td>{record.genreName}</td>
               <td className="text-primary">{record.gameTitle}</td>
             </tr>

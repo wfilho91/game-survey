@@ -1,6 +1,6 @@
 import './styles.css'
-import { ReactComponent as ArrowIcon } from 'assets/img/arrow.svg'
-import { ReactComponent as GamerImage } from 'assets/img/gamer.svg'
+import { ReactComponent as ArrowIcon } from 'core/assets/img/arrow.svg'
+import { ReactComponent as GamerImage } from 'core/assets/img/gamer.svg'
 import { Link } from 'react-router-dom'
 
 const Home = () => {

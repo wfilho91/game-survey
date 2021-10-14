@@ -1,5 +1,7 @@
+export const BASE_URL = 'http://localhost:8080'
+
 export type RecordsResponse = {
-  content: RecordItem[]
+  content: RecordItem []
   totalPages: number
 }
 
@@ -9,7 +11,7 @@ export type RecordItem = {
   age: number
   moment: string
   gameTitle: string
-  platform: Platform
+  gamePlatform: Platform
   genreName: string
 }
 
