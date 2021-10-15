@@ -3,9 +3,9 @@ Project of the week DevSuperior 1.0
 
 # Sobre o projeto
 
-Projeto em produção: https://wfilho-biggame-survey.netlify.app
-
 Big Game Survey é uma aplicação de registros de preferência de usuários por títlulos e plataformas de jogos eletrônicos.
+
+Projeto em produção: https://wfilho-biggame-survey.netlify.app
 
 ## Layout no figma
 https://www.figma.com/file/aQlvot6DtOdcADbfF5sTOm/SDS1-DevSuperior?node-id=0%3A1
