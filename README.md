@@ -40,4 +40,4 @@ yarn start
 
 Wellington Filho
 
-https://www.linkedin.com/in/wellington-filho-277044201/
+https://www.linkedin.com/in/wellington91
