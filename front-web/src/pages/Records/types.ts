@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://game-survey-wellington.herokuapp.com'
+export const BASE_URL = process.env.BACKEND_URL ?? 'http://localhost:8080'
 
 export type RecordsResponse = {
   content: RecordItem []
