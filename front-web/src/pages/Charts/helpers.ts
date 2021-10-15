@@ -5,7 +5,7 @@ export const buildBarSeries = (games: Game[], records: RecordItem[]) => {
   const mappedGames = games.map((game) => {
     const filteredGames = records.filter((item) => {
       return (
-        item.gameTitle === game.title && item.gamePlatform === game.platform
+        item.gameTitle === game.title && item.platform === game.platform
       )
     })
 
@@ -27,7 +27,7 @@ export const getPlatformChartData = (records: RecordItem[]) => {
 
   const series = platforms.map((platform) => {
     const filtedGames = records.filter((item) => {
-      return platform === item.gamePlatform
+      return platform === item.platform
     })
 
     return filtedGames.length

@@ -3,7 +3,7 @@ import './styles.css'
 import { barOptions, pieOptions } from './chart-options'
 import Chart from 'react-apexcharts'
 import { useEffect, useState } from 'react'
-import axios, { AxiosResponse } from 'axios'
+import axios from 'axios'
 import { BASE_URL,RecordsResponse } from 'pages/Records/types'
 import {
   buildBarSeries,
@@ -35,7 +35,7 @@ const Charts = () => {
 
   useEffect(() => {
     async function getData() {
-      const recordsResponse: AxiosResponse<RecordsResponse> = await axios.get(`${BASE_URL}/records`)
+      const recordsResponse = await axios.get(`${BASE_URL}/records`)
       const gamesResponse = await axios.get(`${BASE_URL}/games`)
 
       const barData = buildBarSeries(

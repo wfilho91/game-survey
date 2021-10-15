@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:8080'
+export const BASE_URL = 'https://game-survey-wellington.herokuapp.com'
 
 export type RecordsResponse = {
   content: RecordItem []
@@ -11,8 +11,8 @@ export type RecordItem = {
   age: number
   moment: string
   gameTitle: string
-  gamePlatform: Platform
+  platform: Platform
   genreName: string
 }
 
-export type Platform = 'XBOX' | 'PC' | 'PLAYSTATION'
+export type Platform = 'PC' | 'PLAYSTATION' | 'XBOX'
