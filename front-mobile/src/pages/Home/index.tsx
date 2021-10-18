@@ -1,16 +1,20 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View, Alert } from 'react-native'
-import { FontAwesome5 as Icon } from '@expo/vector-icons'
+import { FontAwesome5 as Icon } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler'
+import { Header } from '../../components/Header'
+import { useNavigation } from '@react-navigation/native'
 
 export function Home() {
+  const navigation = useNavigation()
 
-  const handleOnPres = () => {
-    Alert.alert('Vc clicou no botão !')
+  const handleOnPress = ()=>{
+    navigation.navigate('CreateRecord')
   }
 
   return (
     <>
+      <Header />
       <View style={styles.container}>
         <Image
           style={styles.gamerImage}
@@ -20,10 +24,10 @@ export function Home() {
         <Text style={styles.subTitle}>Nos diga qual é seu jogo favorito!</Text>
       </View>
       <View style={styles.footer}>
-        <RectButton style={styles.button} onPress={handleOnPress}>
+        <RectButton style={styles.button} onPress={handleOnPress} >
           <Text style={styles.buttonText}> COLETAR DADOS</Text>
           <Text style={styles.buttonIcon}>
-            <Icon name="chevron-right" color="#fff" size={25}/>
+          <Icon name="chevron-right" size={25} color="#fff" />
           </Text>
         </RectButton>
       </View>
@@ -69,7 +73,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center',
     width: 50,
-    padding: 17,
     borderBottomRightRadius: 10,
     borderTopRightRadius: 10
   },
