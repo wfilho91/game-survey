@@ -27,7 +27,7 @@ export function Home() {
         <RectButton style={styles.button} onPress={handleOnPress} >
           <Text style={styles.buttonText}> COLETAR DADOS</Text>
           <Text style={styles.buttonIcon}>
-          <Icon name="chevron-right" size={25} color="#fff" />
+          <Icon name="chevron-right" size={30} color="#fff" />
           </Text>
         </RectButton>
       </View>
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+    paddingTop:10,
     width: 50,
     borderBottomRightRadius: 10,
     borderTopRightRadius: 10
